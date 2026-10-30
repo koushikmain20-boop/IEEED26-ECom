@@ -1,5 +1,9 @@
 def test_health(client):
     response = client.get("/health")
+
     assert response.status_code == 200
-    assert response.json()["status"] == "ok"
-    assert response.json()["service"] == "northstar-market"
+
+    data = response.json()
+
+    assert data["status"] == "ok"
+    assert data["service"] == "northstar-market"
