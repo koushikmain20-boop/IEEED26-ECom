@@ -6,4 +6,3 @@ __pycache__/
 northstar.db
 test-*.db
 *.egg-info/
-
